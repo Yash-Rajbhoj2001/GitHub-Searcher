@@ -13,9 +13,11 @@ export class UserDetailPageComponent implements OnInit {
   
   imgurl : string;
   name : string;
-  bio : string;
+  PublicRepositories : string;
   followers : number;
-  company : string;
+  following : number;
+  email : string;
+  ProfileLink : string;
   location : string;
 
   constructor(private route : ActivatedRoute , private githubService :GithubService , private router : Router ) { }
@@ -39,9 +41,11 @@ export class UserDetailPageComponent implements OnInit {
          next : (data : any = []) => {
            this.userDetail = data;
            console.log(this.userDetail);
-           this.bio = this.userDetail.bio;
-           this.company = this.userDetail.company;
+           this.PublicRepositories = this.userDetail.public_repos;
+           this.ProfileLink = this.userDetail.html_url;
            this.followers = this.userDetail.followers;
+           this.following = this.userDetail.following;
+           this.email = this.userDetail.email;
            this.imgurl = this.userDetail.avatar_url;
            this.location = this.userDetail.location;
            this.name = this.userDetail.name;

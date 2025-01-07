@@ -1,14 +1,17 @@
 
-<div class="card" style="width: 18rem; width:600px; height:300px" >
+<div class="card" style="width: 18rem; width:400px; height:300px" >
     <img src={{imgurl}} class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">name : {{username}}</h5>
-      <p class="card-text"> bio : {{bio}}</p>
+      <h5 class="card-title">Name : {{username}}</h5>
+      <!-- <p class="card-text"> Public Repositories : {{PublicRepositories}}</p> -->
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">Company : {{company}} </li>
+      <li class="list-group-item"> Public Repositories : {{PublicRepositories}}</li>
+      <li class="list-group-item">followers : {{followers}}&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;following : {{following}}</li>
+      <li class="list-group-item">Profile Link : {{ProfileLink}} </li>
+      <li class="list-group-item">Email ID : {{email}} </li>
       <li class="list-group-item">location : {{location}}</li>
-      <li class="list-group-item">followers : {{followers}}</li>
+      
     </ul>
    
 </div>
